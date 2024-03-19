@@ -12,7 +12,7 @@ def binary_search(list, search,index=0):
         
         return binary_search(list[mid:],search,index+mid) 
       
-list1 = [1, 3, 2, 4, 5, 9,6,8,21,0,7]
+list1 = [1,2,3,4,5,6,7,8,9]
 list1.sort()
 print(list1)
 search = int(input("Enter the number to be searched: "))

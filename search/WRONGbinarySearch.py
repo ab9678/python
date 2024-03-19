@@ -1,5 +1,5 @@
 # Create a python program to make a binary search through a list
-
+# This is wrong coz here index is not calculating for the missed out "mid" elements index
 def binary_search(list, search,index=0):
     
     
