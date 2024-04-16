@@ -1,6 +1,8 @@
 # Create a python program to make a binary search through a list
 def binary_search(list, search,index=0):
     mid = len(list) // 2
+    if len(list) <=1 and list[mid] != search:
+        return -1
     if list[mid] == search:
         
         return index+mid
@@ -17,5 +19,9 @@ list1.sort()
 print(list1)
 search = int(input("Enter the number to be searched: "))
 result = binary_search(list1, search , 0)
-print("The index of the number is",result)
-print('And the numner found is',list1[result])
+
+if result != -1:
+    print("The index of the number is",result)
+    print('And the number found is',list1[result])
+else:
+    print("not found!")
