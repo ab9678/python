@@ -1,4 +1,3 @@
-
 def calculator(n1,n2,op):
     if op == "+":
         return n1+n2
@@ -11,12 +10,6 @@ def calculator(n1,n2,op):
     else:
         return "INVALID"
 
-
-
-
-
-
-
 def main():
 
     num1= int(input("Enter a number"))
@@ -26,6 +19,6 @@ def main():
 
     res = calculator(num1,num2,operator)
     print(res)
-
+    ...
 
 main()
