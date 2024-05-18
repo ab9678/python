@@ -10,6 +10,13 @@ def calculator(n1,n2,op):
     else:
         return "INVALID"
 
+
+def convert():
+    ...
+
+
+
+
 def main():
 
     num1= int(input("Enter a number"))
