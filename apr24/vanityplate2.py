@@ -1,14 +1,5 @@
-#
-# print("hello world")
-# i = int(input(""))
-# if i < 10 :
-#     print("too low")
-# elif 11<i<20 :
-#     print("very well")
-# else:
-#     print("too high")
-#
-#
-#
+''' Here are the requirements for vanity plate cs50, though vanity plate is tougher but the main problem arises when 
+    trying to combine the indivisual challenges and give the real output. That's where we need to solve
+'''
 
 
