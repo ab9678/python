@@ -22,6 +22,7 @@ def main():
 
 def is_valid(plate):
     # check if the plate has 2 digits
+
     if plate[0:2].isalpha():
         if 2<=len(plate)<=6:
             
@@ -37,4 +38,3 @@ def checkNumMiddle(plate):
         
         
 
-main()

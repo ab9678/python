@@ -21,7 +21,8 @@ def convert(time):
     return time
 
 
-if __name__ == "main":
-    main()
+#if __name__ == "main":
+#    main()
+#    ...
 
 main()
