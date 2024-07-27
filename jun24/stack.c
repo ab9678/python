@@ -4,12 +4,15 @@
 
 int stack[N];
 int address = -1;
-int ifFull_empty(int stack[N]){
+int ifFull_empty(){
     if (address >= N-1){
-        return 1;   //stackoverflow
+        //stackoverflow
+        printf("stackoverflow");
+        exit(0);   
     }else if (address==-1){
-        return 2;   //stackunderflow
-      
+           //stackunderflow
+        printf("stackunderflow");
+        exit(0); 
     }else{
         return 0;
     }
@@ -19,34 +22,38 @@ void push(){
     int x;
     printf("Enter data: ");
     scanf("%d",&x);
+    address++;
+    ifFull_empty();
+    
+    
+    stack[address]=x;
 
-    if (ifFull_empty(stack[N]) == 1){
-        printf("Stackoverflow");    // should use display() here before exit so that atleast the remaining stack which was entered can be accessed
-        exit(0);
-    }else{
-        address++;
-        stack[address]=x;
-    }
 
 
 }
 int pop(){
 
-    if(ifFull_empty(stack[N])==2){
-        printf("Stackunderflow");
-        exit(0);
-    }else{
-        return stack[address];
-        address--;
+    ifFull_empty();    
+    printf("%d", stack[address]);
+    address--;
+
+    // if I return the element and then do address--, it returns the lement but the adresss code never excecutes
+    // this is because return statement returns the power to function call and anything after that is essentially unreachable 
+    
+
+}
+
+
+int peek(){
+    // return the top element to main()
+    ifFull_empty();
+    printf("%d", stack[address]);
+}
+int display(){
+    ifFull_empty();
+    for (int i = address ; i>-1 ; i--){
+        printf("%d\t",stack[i]);
     }
-}
-
-
-void peek(){
-
-}
-void display(){
-
 }
 int main(){
     int choice ;
@@ -62,7 +69,7 @@ int main(){
             push();                 //updates the stack
             break;
         case 2:
-            printf("%d\n",pop());  //deletes element from stack generally top-most element not really,
+            pop();  //deletes element from stack generally top-most element not really,
             break;                  //popping means returning the top-most element and move the address to the next lower address, that way the original element becomes inaccessible
         case 3: peek();             // returns top-most element
             break;
@@ -76,8 +83,8 @@ int main(){
     }while(exitstatus != 0);        // this is written to very if the user wants to exit, until then keep running
     
 
-    for(int i =0 ; i<N ; i++){
-        printf("%d\t",stack[i]);    //this is not needed after I write the display() function, display function will
-                                    //do this 
-    }
+    // for(int i =0 ; i<N ; i++){
+    //     printf("%d\t",stack[i]);    //this is not needed after I write the display() function, display function will
+    //                                 //do this 
+    // }
 }
