@@ -8,7 +8,7 @@ def contracting(l):
         i+=1
     return True
     
-print(contracting([9,3,5]))
+# print(contracting([9,3,5]))
 
 
 '''
@@ -54,4 +54,6 @@ def counthv(l):
     return list1
 
 
-print(counthv([1,2,3,1]))
+# print(counthv([1,2,3,1]))
+
+
